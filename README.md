@@ -39,7 +39,7 @@ A real-time screen sharing application built with Next.js, WebRTC, and PeerJS. C
 First, clone the repository:
 
 ```bash
-git clone https://github.com/tonghohin/screen-sharing.git
+git clone https://github.com/VA5UDEV/screen-sharing.git
 ```
 
 Navigate to the project directory:
