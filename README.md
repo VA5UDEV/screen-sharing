@@ -61,33 +61,3 @@ Start the development server:
 ```bash
 npm run dev
 ```
-
-### Using Docker
-
-Start the development container:
-
-```bash
-docker compose up
-```
-
-## 📦 Deployment
-
-### Cloud Platform
-
-This application can be deployed on any cloud platform that supports static site hosting.
-
-### Self Hosting
-
-You can self-host this application using Docker:
-
-```bash
-docker run -p 3000:3000 -d --name screen-sharing ghcr.io/tonghohin/screen-sharing:latest
-```
-
-## 👥 Contributing
-
-Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details on how to submit pull requests, report issues, and contribute to the project.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
