@@ -22,17 +22,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <body className={inter.className}>
                 <main className="from-background to-muted flex min-h-screen flex-col justify-between bg-linear-to-b">
                     {children}
-                    <footer className="text-muted-foreground px-4 py-8 text-center text-sm">
-                        Built by{" "}
-                        <Link href="https://tonghohin.vercel.app" className="underline" target="_blank">
-                            Hin
-                        </Link>
-                        . The source code is available on{" "}
-                        <Link href="https://github.com/tonghohin/screen-sharing" className="underline" target="_blank">
+                    {/* <footer className="text-muted-foreground px-4 py-8 text-center text-sm">
+                        The source code is available on{" "}
+                        <Link href="https://github.com/VA5UDEV/screen-sharing" className="underline" target="_blank">
                             Github
                         </Link>
                         .
-                    </footer>
+                    </footer> */}
                 </main>
                 <ClarityScript />
                 <Toaster richColors />
