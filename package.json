@@ -3,8 +3,6 @@
     "version": "0.1.0",
     "description": "A real-time screen sharing application allowing users to easily share their screen with others with a simple code.",
     "private": true,
-    "license": "MIT",
-    "author": "Hin",
     "scripts": {
         "dev": "next dev --turbopack",
         "build": "next build",
@@ -12,8 +10,7 @@
         "lint": "next lint",
         "format": "prettier --write .",
         "format:check": "prettier --check .",
-        "lint-staged": "lint-staged",
-        "prepare": "husky"
+        "lint-staged": "lint-staged"
     },
     "dependencies": {
         "@microsoft/clarity": "^1.0.0",
