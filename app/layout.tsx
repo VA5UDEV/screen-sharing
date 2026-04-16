@@ -1,9 +1,13 @@
 import { ClarityScript } from "@/components/clarity-script";
 import { Toaster } from "@/components/ui/sonner";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Geist } from "next/font/google";
 import Link from "next/link";
+import { ThemeProvider } from "@/components/ui/theme-provider";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,20 +22,22 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning className={cn("font-sans", geist.variable)}>
             <body className={inter.className}>
-                <main className="from-background to-muted flex min-h-screen flex-col justify-between bg-linear-to-b">
-                    {children}
-                    {/* <footer className="text-muted-foreground px-4 py-8 text-center text-sm">
+                <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+                    <main>
+                        {children}
+                        {/* <footer className="text-muted-foreground px-4 py-8 text-center text-sm">
                         The source code is available on{" "}
                         <Link href="https://github.com/VA5UDEV/screen-sharing" className="underline" target="_blank">
                             Github
                         </Link>
                         .
                     </footer> */}
-                </main>
-                <ClarityScript />
-                <Toaster richColors />
+                    </main>
+                    <ClarityScript />
+                    <Toaster richColors />
+                </ThemeProvider>
             </body>
         </html>
     );
