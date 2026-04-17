@@ -46,7 +46,6 @@ export function CustomRoomIdForm() {
           </span>
         </div>
         <Button
-          variant="outline"
           disabled={!customRoomId}
           asChild={!!customRoomId}
         >
