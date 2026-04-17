@@ -54,7 +54,13 @@ function applyWithTransition(
   origin: { x: number; y: number },
   apply: () => void,
 ) {
-  if (!document.startViewTransition || window.innerWidth > 1800) {
+  const doc = document as Document & {
+    startViewTransition?: (callback: () => void) => {
+      ready: Promise<void>;
+    };
+  };
+  
+  if (!doc.startViewTransition || window.innerWidth > 1800) {
     apply();
     return;
   }
@@ -66,7 +72,7 @@ function applyWithTransition(
   document.documentElement.style.setProperty("--vt-x", `${x}px`);
   document.documentElement.style.setProperty("--vt-y", `${y}px`);
   document.documentElement.style.setProperty("--vt-r", `${endRadius}px`);
-  document.startViewTransition(apply).ready.catch(() => {});
+  doc.startViewTransition(apply).ready.catch(() => {});
 }
 
 interface ThemeSwitchProps {
