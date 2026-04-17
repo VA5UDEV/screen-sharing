@@ -26,7 +26,7 @@ export function ShareOptions({ roomId }: ShareOptionsProps) {
   }
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col mt-4 gap-6">
       <div className="flex flex-col gap-2">
         <p className="text-muted-foreground text-sm">Room Code</p>
         <code className="bg-muted flex w-full items-center justify-between gap-2 rounded-lg p-3 font-mono text-sm tracking-tight">
