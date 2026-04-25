@@ -16,7 +16,7 @@ import { ThemeSwitch } from "@/components/theme-switch";
 export default function Home() {
   return (
     <div>
-      <div className="h-[90vh] mx-auto flex justify-center max-w-3xl flex-col gap-8 px-4 py-8">
+      <div className="mx-auto flex h-[90vh] max-w-3xl flex-col justify-center gap-8 px-4 py-8">
         <div className="flex flex-col items-center gap-4 text-center">
           <div className="flex gap-2">
             <Badge asChild>
@@ -31,14 +31,14 @@ export default function Home() {
               <ThemeSwitch iconSize={12} />
             </Badge>
           </div>
-          <h1 className="mx-auto max-w-3xl text-balance text-4xl font-bold tracking-tight sm:text-5xl">
+          <h1 className="mx-auto max-w-3xl text-4xl font-bold tracking-tight text-balance sm:text-5xl">
             Share Your Screen Instantly
           </h1>
-          <p className="text-muted-foreground mx-auto max-w-xl text-balance text-xl">
+          <p className="text-muted-foreground mx-auto max-w-xl text-xl text-balance">
             Create, join, and share your screen with others in real-time.
           </p>
         </div>
-            <div className="mx-auto flex w-full max-w-3xl flex-col gap-8 px-4">
+        <div className="mx-auto flex w-full max-w-3xl flex-col gap-8 px-4">
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
