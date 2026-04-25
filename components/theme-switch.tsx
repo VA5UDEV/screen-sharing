@@ -59,7 +59,7 @@ function applyWithTransition(
       ready: Promise<void>;
     };
   };
-  
+
   if (!doc.startViewTransition || window.innerWidth > 1800) {
     apply();
     return;
@@ -102,7 +102,7 @@ function ThemeSwitch({ iconSize = 16, className }: ThemeSwitchProps) {
       <div
         aria-hidden
         className={cn(
-          "size-9 rounded-full bg-accent border border-border",
+          "bg-accent border-border size-9 rounded-full border",
           className,
         )}
       />
@@ -113,10 +113,10 @@ function ThemeSwitch({ iconSize = 16, className }: ThemeSwitchProps) {
     <motion.button
       onClick={toggle}
       className={cn(
-        "relative flex items-center justify-center size-9 rounded-full",
-        "bg-accent border border-border cursor-pointer",
+        "relative flex size-9 items-center justify-center rounded-full",
+        "bg-accent border-border cursor-pointer border",
         "text-foreground outline-none",
-        "focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+        "focus-visible:ring-ring focus-visible:ring-offset-background focus-visible:ring-2 focus-visible:ring-offset-2",
         className,
       )}
       whileHover={{ scale: 1.08 }}
