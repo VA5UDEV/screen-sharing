@@ -45,10 +45,7 @@ export function CustomRoomIdForm() {
             spaces allowed in between.
           </span>
         </div>
-        <Button
-          disabled={!customRoomId}
-          asChild={!!customRoomId}
-        >
+        <Button disabled={!customRoomId} asChild={!!customRoomId}>
           <Link href={`/host?room=${customRoomId}`}>
             Create Room with Custom ID
           </Link>
